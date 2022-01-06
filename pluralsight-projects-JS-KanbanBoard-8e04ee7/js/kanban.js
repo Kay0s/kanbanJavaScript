@@ -22,6 +22,9 @@ const create_item = () => {
   item.draggable = true;
   item.addEventListener("dragstart", e =>
     e.dataTransfer.setData("text", e.target.id)
+  );
+  item.addEventListener("dragend", e =>
+    e.dataTransfer.clearData()
   )
 };
 
